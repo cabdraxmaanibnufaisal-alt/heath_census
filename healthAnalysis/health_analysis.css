@@ -1,0 +1,241 @@
+/* ===== General ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f8fb;
+  color: #1f2937;
+  min-height: 100vh;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background: #0f766e;
+  color: white;
+  padding: 18px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+nav h1 {
+  font-size: 25px;
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+nav li {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 9px 13px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* ===== Search ===== */
+#conditionInput {
+  width: 220px;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+}
+
+#btnSearch {
+  background: white;
+  color: #0f766e;
+  border: none;
+  padding: 10px 17px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+#btnSearch:hover {
+  background: #dff7f4;
+}
+
+/* ===== Main Container ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 45px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* ===== Analysis Form ===== */
+.analysisForm,
+.searchCondition {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.analysisForm h1 {
+  color: #0f766e;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+.analysisForm h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #374151;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 10px;
+}
+
+/* ===== Form Fields ===== */
+.analysisForm > div {
+  margin-bottom: 20px;
+}
+
+.analysisForm label {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.analysisForm input[type="text"],
+.analysisForm input[type="number"],
+.analysisForm select {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  font-size: 15px;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+
+.analysisForm input:focus,
+.analysisForm select:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
+}
+
+/* ===== Gender ===== */
+.analysisForm input[type="radio"] {
+  margin: 0 5px 0 12px;
+}
+
+.analysisForm input[type="radio"] + label {
+  font-weight: normal;
+}
+
+/* ===== Add Patient Button ===== */
+#addPatient {
+  width: 100%;
+  background: #0f766e;
+  color: white;
+  border: none;
+  padding: 13px;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addPatient:hover {
+  background: #115e59;
+  transform: translateY(-1px);
+}
+
+/* ===== Report ===== */
+#report {
+  background: #f0fdfa;
+  border-left: 4px solid #0f766e;
+  border-radius: 6px;
+  padding: 15px;
+  min-height: 80px;
+  line-height: 1.7;
+}
+
+/* ===== Search Results ===== */
+.searchCondition {
+  min-height: 300px;
+}
+
+#result {
+  color: #374151;
+  line-height: 1.7;
+}
+
+#result h2,
+#result h3 {
+  color: #0f766e;
+  margin-bottom: 12px;
+}
+
+#result p {
+  margin-bottom: 10px;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 800px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #conditionInput,
+  #btnSearch {
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    width: 94%;
+    margin: 25px auto;
+  }
+
+  .analysisForm,
+  .searchCondition {
+    padding: 22px;
+  }
+
+  nav h1 {
+    font-size: 22px;
+  }
+}
